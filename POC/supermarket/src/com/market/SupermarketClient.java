@@ -17,7 +17,7 @@ public class SupermarketClient {
 	   * @see IOException
 	   */
 	public static void main(String[] args) {
-		Supermarket supermarket = new SupermarketRegister();
+		Supermarket supermarket = new SupermarketRegister(); 
 		System.out.println(supermarket.checkout("ABBACBBAB"));	
 	}
 
