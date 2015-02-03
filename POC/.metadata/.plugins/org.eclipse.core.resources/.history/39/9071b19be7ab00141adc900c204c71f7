@@ -1,0 +1,11 @@
+package com.market;
+
+public class SupermarketClient {
+
+	public static void main(String[] args) {
+		Supermarket supermarket = new Register();
+		supermarket.checkout(items)
+
+	}
+
+}

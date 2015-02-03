@@ -1,0 +1,15 @@
+package com.market;
+
+/**
+ * The Supermarket program implements a checkout register application
+ * that calculates the price of a given sequence of items
+ *
+ * @author Ashish Sharma
+ * @version 1.0
+ * @since 2015-02-03
+ */
+
+public interface Supermarket {
+	public int checkout(String items);
+
+}

@@ -1,0 +1,11 @@
+package com.market;
+
+public class Register implements Supermarket{
+
+	@Override
+	public int checkout(String items) {
+		
+		return 0;
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.market;
+
+public class Register implements Supermarket{
+
+	@Override
+	public int checkout(String items) {
+		
+		char[] item = items.toCharArray();
+		for (char ch : array) {
+		    System.out.println (ch);
+		}
+		
+		
+		DataWarehouse dataWarehouse = new DataWarehouse();
+		dataWarehouse.getProduct();
+		
+		return 0;
+	}
+
+}

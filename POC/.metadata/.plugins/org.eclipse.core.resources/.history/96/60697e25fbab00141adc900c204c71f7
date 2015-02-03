@@ -1,0 +1,32 @@
+package com.market;
+/**
+ * The PriceRuleEngine program implements various rules which should be applicable for pricing
+ * 
+ * @author Ashish Sharma
+ * @version 1.0
+ * @since 2015-02-03
+ */
+
+public class PriceRuleEngine {
+	
+	/**
+	 * This method is used to provide items and returned the sum of those items price.
+	 * 
+	 * @param items This is the only paramter to applyAllRules method which contains item's price
+	 * @return boolean This returns true if all rules validated
+	 */
+	boolean applyAllRules(int price){
+		return minPriceOfProduct(price);
+	
+	}
+	
+	boolean minPriceOfProduct(int price){
+		boolean validPrice = true;
+		if(price < 1 ){
+			System.out.println("Minumum amount set for any product is $1, current provide price is: " + price);
+			validPrice = false;
+		}		
+		return validPrice;
+	}
+
+}

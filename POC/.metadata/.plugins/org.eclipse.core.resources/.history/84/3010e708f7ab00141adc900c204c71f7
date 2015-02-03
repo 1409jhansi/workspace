@@ -1,0 +1,46 @@
+package com.market;
+
+import java.util.Map;
+
+/**
+ * The SupermarketRegister program implements a checkout register application
+ * that calculates the price of a given sequence of items
+ *
+ * @author Zara Ali
+ * @version 1.0
+ * @since 2014-03-31
+ */
+public class SupermarketRegister implements Supermarket {
+
+	/**
+	 * This method is used to add two integers. This is a the simplest form of a
+	 * class method, just to show the usage of various javadoc Tags.
+	 * 
+	 * @param numA
+	 *            This is the first paramter to addNum method
+	 * @param numB
+	 *            This is the second parameter to addNum method
+	 * @return int This returns sum of numA and numB.
+	 */
+	public int checkout(String items) {
+
+		DataWarehouse dataWarehouse = new DataWarehouse();
+		Map<String, Integer> productInfo = dataWarehouse.getProduct();
+		int totalPrice = 0;
+
+		char[] itemsArray = items.toCharArray();
+		for (char item : itemsArray) {
+			// System.out.println (item);
+			Integer itemPrice = productInfo.get(String.valueOf(item));
+			if (itemPrice != null) {
+				totalPrice += itemPrice;
+			} else {
+				System.out.println("Item: " + item
+						+ " is not found in DataWarehouse");
+			}
+		}
+
+		return totalPrice;
+	}
+
+}
